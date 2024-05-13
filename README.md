@@ -31,7 +31,7 @@ text = ["normal", "healthy", "macular edema", "diabetic retinopathy", "glaucoma"
 probs, logits = model(image, text)
 ```
 
-## Pretrained model
+## Pretrained model (if you use it, you can skip pre-training step)
 
 
 | Backbone  |      ID      |                                                                                               |
@@ -43,8 +43,8 @@ probs, logits = model(image, text)
 In the following, we present the scripts for model pre-training and transferability. To use them, we recommend cloning the whole repository.
 
 ```
-git clone https://github.com/jusiro/FLAIR.git
-cd FLAIR
+git clone https://github.com/Flash-sheep/CGI-HRDC2023.git
+cd CGI-HRDC2023
 pip install -r requirements.txt
 ```
 
@@ -76,16 +76,6 @@ python main_pretrain.py --augment_description True --balance True --epochs 15 --
 * Define the relative paths for datasets and dataframes in `./local_data/constants.py`.
 * Prepare the experiment setting for the target dataset - we used `./local_data/experiments.py` to store them.
 
-```
-if experiment == "02_MESSIDOR":
-    setting = {"dataframe": PATH_DATAFRAME_TRANSFERABILITY_CLASSIFICATION + "02_MESSIDOR.csv",
-               "task": "classification",
-               "targets": {"no diabetic retinopathy": 0,
-                           "mild diabetic retinopathy": 1,
-                           "moderate diabetic retinopathy": 2,
-                           "severe diabetic retinopathy": 3,
-                           "proliferative diabetic retinopathy": 4}}
-```
 
 * Zero-shot (no adaptation).
 
