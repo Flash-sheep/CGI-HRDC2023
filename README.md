@@ -50,8 +50,6 @@ pip install -r requirements.txt
 
 ### 📦 Foundation model pre-training
 
-* Define the relative paths for datasets and dataframes in `./local_data/constants.py`.
-
 * Prepare the FUNDUS assembly dataset - check `./local_data/prepare_partitions.py` to prepare the dataframes.
 
 
