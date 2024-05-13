@@ -10,26 +10,6 @@ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit
 ```
 
 
-## Usage
-
-```
-from PIL import Image
-import numpy as np
-
-from vsee import FLAIRModel
-
-model = FLAIRModel(from_checkpoint=True)
-
-# Load image and set target categories 
-# (if the repo is not cloned, download the image and change the path!)
-
-image = np.array(Image.open("./documents/sample_macular_hole.png"))
-text = ["normal", "healthy", "macular edema", "diabetic retinopathy", "glaucoma", "macular hole",
-        "lesion", "lesion in the macula"]
-
-# Forward FLAIR model to compute similarities
-probs, logits = model(image, text)
-```
 
 ## Pretrained model (if you use it, you can skip pre-training step)
 
