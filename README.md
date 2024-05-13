@@ -80,11 +80,11 @@ python main_pretrain.py --augment_description True --balance True --epochs 15 --
 * Zero-shot (no adaptation).
 
 ```
-python main_transferability.py --experiment 02_MESSIDOR --method zero_shot --load_weights True --domain_knowledge True  --shots_train 0% --shots_test 100% --project_features True --norm_features True --folds 1 
+python main_transferability.py --experiment CGI_HRDC_Task2 --method zero_shot --load_weights True --domain_knowledge True  --shots_train 0% --shots_test 100% --project_features True --norm_features True --folds 1 
 ```
 
 * Linear Probing.
 
 ```
-python main_transferability.py --experiment 02_MESSIDOR --method lp --load_weights True --shots_train 80% --shots_test 20% --project_features False --norm_features False --folds 5 
+python main_transferability.py --experiment CGI_HRDC_Task2 --method lp --load_weights True --shots_train 80% --shots_test 20% --project_features False --norm_features False --folds 5 
 ```
