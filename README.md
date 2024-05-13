@@ -73,10 +73,6 @@ python main_pretrain.py --augment_description True --balance True --epochs 15 --
 ```
 
 ### 📦 Transferability to downstream tasks/domains
-* Define the relative paths for datasets and dataframes in `./local_data/constants.py`.
-* Prepare the experiment setting for the target dataset - we used `./local_data/experiments.py` to store them.
-
-
 * Zero-shot (no adaptation).
 
 ```
